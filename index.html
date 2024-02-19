@@ -13,8 +13,25 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
+ .gradient-background {
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
         body {
-            background-color: #FF7676;
+            background-color: #E3E1D9;
         }
         .container {
             display: flex;
@@ -29,9 +46,9 @@
             align-items: center;
             font-family: "PT Serif", serif;
             font-weight: 800;
-            background-color: #0802A3;
             z-index: 1;
             position: fixed;
+            background-color: #7F27FF;
         }
         .card {
             margin-top: 12rem;
@@ -40,13 +57,13 @@
             font-family:"Oswald", sans-serif;
             font-optical-sizing: auto;
             font-weight: 900;
-            color: #7F27FF;
+            color: #070F2B;
         }
         .card-text {
             font-family: "PT Serif", serif;
             font-weight: 800;
             font-size: auto;
-            color: #0079FF;
+            color: #070F2B;
         }
         .btn {
             align-self: center;
@@ -74,10 +91,21 @@
             background-color: #FEECE2;
         }
         .modal-header {
-            background-color: #F7DED0;
+            background-color: #7F27FF;
+            color: white;
         }
         .modal-footer {
-            background-color: #E2BFB3;
+            background-color: #9F70FD;
+        }
+        .table-header {
+            color: white;
+            font-family:"Oswald", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+        }
+        #table-content {
+            font-family: "PT Serif", serif;
+            font-weight: 800;
         }
     </style>
 </head>
@@ -87,6 +115,7 @@
         
 <!-- Navigation panel-->
 <div class="page-header">
+    
         <ul class="nav nav-pills nav-fill shadow p-3 rounded">
             <li class="nav-item">
               <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropAboutMe">About Me</a>
@@ -95,7 +124,7 @@
               <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropWrkExp">Work Experience</a>
             </li>
             <li class="nav-item">
-                <a type="button" class="nav-link" data-bs-toggle="modal" href="./Sea-Service.html">Sea Service</a>
+                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropSeaServ">Sea Service</a>
             </li>
             <li class="nav-item">
               <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleBackdropCert">Certifications</a>
@@ -110,6 +139,7 @@
                 <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">Contact Me!</a>
             </li>
           </ul>
+        
     </div>
     <div class="container">   
     <!--card begins here-->      
@@ -117,7 +147,7 @@
         <img src="./resume dp.jpg" class="card-img-top" alt="Ajits Image" height="200">
         <div class="card-body">
           <h5 class="card-title">AJIT DEVRUKHKAR</h5>
-          <p class="card-text">Welcome to my website where I have showcased my background, work history, skills & portfolio besides other things.</p>
+          <p class="card-text">Welcome to my website! Explore my career background, certifications & more.</p>
           <p class="d-inline-flex gap-1">
   <!-- Button trigger modal -->
   <!--<a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">
@@ -135,7 +165,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="./about me.jpg" height="50px"><h1 class="modal-title fs-5" id="staticBackdropLabel">About Me</h1>
+          <img src="./about me.jpg" height="50px"><h1 class="modal-title fs-5" id="staticBackdropLabel"> About Me</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -197,10 +227,117 @@
   </div>
   <!--Modal Work Experience ends-->
 
+<!--Modal Sea Service starts-->
+
+
+  <div class="modal fade modal-xl" id="staticBackdropSeaServ" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"><img src="./seaService.jpg" height="50px"> Sea Service</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <table class="table table-bordered table-hover table-striped table-success" bgcolor="black" width="700">
+              <tr class="table-header" bgcolor="0802A3" width="500">
+                <th>SR. NO</th>
+                <th>NAME OF THE VESSEL</th>
+                <th>TYPE</th>
+                <th>RANK</th>
+                <th>GRT</th>
+                <th>MAIN ENGINE TYPE</th>
+                <th>PERIOD FROM</th>
+                <th>PERIOD TO</th>
+                <th>COMPANY NAME</th>
+                <th>REASON FOR SIGN OFF</th>
+              </tr>
+              <tr bgcolor="83A2FF" id="table-content"   width="500">
+                <td>1</td>
+                <td>M.T. MARLIN AMBER</td>
+                <td>OIL/CHEM TANKER</td>
+                <td>3RD ENGINEER</td>
+                <td>29534</td>
+                <td>6S50ME-B</td>
+                <td>07-MAR-2023</td>
+                <td>08-OCT-2023</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+              <tr bgcolor="B4BDFF" id="table-content" width="500">
+                <td>2</td>
+                <td>M.T. CLAXTON BAY</td>
+                <td>OIL/CHEM TANKER</td>
+                <td>3RD ENGINEER</td>
+                <td>23373</td>
+                <td>6S50MC-C</td>
+                <td>15-SEPT-2021</td>
+                <td>27-MAR-2022</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+              <tr bgcolor="83A2FF" id="table-content" width="500">
+                <td>3</td>
+                <td>M.T. ZARIFA ALIYEVA</td>
+                <td>CRUDE OIL TANKER</td>
+                <td>4TH ENGINEER</td>
+                <td>60379</td>
+                <td>6S60MC-C</td>
+                <td>17-SEPT-2020</td>
+                <td>21-MAR-2021</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+              <tr bgcolor="B4BDFF" id="table-content" width="500">
+                <td>4</td>
+                <td>M.T. HOUYOSHI EXPRESS II</td>
+                <td>OIL/CHEM TANKER</td>
+                <td>4TH ENGINEER</td>
+                <td>29289</td>
+                <td>6S50MC-C</td>
+                <td>18-DEC-2019</td>
+                <td>13-JUL-2020</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+              <tr bgcolor="83A2FF" id="table-content" width="500">
+                <td>5</td>
+                <td>M.T. MARLIN AZURITE</td>
+                <td>OIL/CHEM TANKER</td>
+                <td>JR. ENGINEER</td>
+                <td>29534</td>
+                <td>6S50ME-B</td>
+                <td>15-SEPT-2018</td>
+                <td>19-MAR-2019</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+              <tr bgcolor="B4BDFF" id="table-content" width="500">
+                <td>6</td>
+                <td>M.T. ADRIATIC WAVE</td>
+                <td>OIL/CHEM TANKER</td>
+                <td>JET</td>
+                <td>297333</td>
+                <td>6S50MC-C</td>
+                <td>03-FEB-2017</td>
+                <td>17-AUG-2017</td>
+                <td>EXECUTIVE SHIP MANAGEMENT</td>
+                <td>COMPLETION OF CONTRACT</td>
+              </tr>
+          
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+    <!--Modal Sea Service ends-->
+
   <!--Modal Certification starts-->
 
-  
-  
   <!-- Modal -->
   <div class="modal fade modal-xl" id="exampleBackdropCert" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
