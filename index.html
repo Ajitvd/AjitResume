@@ -13,7 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
     <style>
-      
         body {
             background-color: #F1EAFF;
         }
@@ -22,7 +21,7 @@
             width: max-content;
             justify-content: center;
             flex-direction: column;
-            align-items: center;
+            height: 100vh;
         }
         .nav-pills {
             height: 8rem;
@@ -34,8 +33,8 @@
             position: fixed;
             background-color: #734bae;
         }
-        .card {
-            margin-top: 12rem;
+        #alignCard {
+          margin-top: 12rem;
         }
         .card-title {
             font-family:"Oswald", sans-serif;
@@ -100,34 +99,34 @@
 <!-- Navigation panel-->
 <div class="page-header">
     
-        <ul class="nav nav-pills nav-fill shadow p-3 rounded">
+        <ul class="nav nav-pills nav-fill shadow p-3 rounded flex-column flex-sm-row">
             <li class="nav-item">
-              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropAboutMe">About Me</a>
+              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropAboutMe">About Me</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropWrkExp">Work Experience</a>
+              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropWrkExp">Work Experience</a>
             </li>
             <li class="nav-item">
-                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropSeaServ">Sea Service</a>
+                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropSeaServ">Sea Service</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleBackdropCert">Certifications</a>
+              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#exampleBackdropCert">Certifications</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropEdu">Education</a>
+              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropEdu">Education</a>
             </li>
             <!--<li class="nav-item">
-                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropPortfolio">Portfolio</a>
+                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropPortfolio">Portfolio</a>
             </li>-->
             <li class="nav-item">
-                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">Contact Me!</a>
+                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">Contact Me!</a>
             </li>
           </ul>
         
     </div>
     <div class="container">   
     <!--card begins here-->      
-    <div class="card shadow-lg p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+    <div class="card shadow-lg p-3 bg-body-tertiary rounded" style="width: 18rem;" id="alignCard">
         <img src="./resume dp.jpg" class="card-img-top" alt="Ajits Image" height="200">
         <div class="card-body">
           <h5 class="card-title">AJIT DEVRUKHKAR</h5>
@@ -221,7 +220,7 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel"><img src="./seaService.jpg" height="50px"> Sea Service</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body table-responsive-sm">
             <table class="table table-bordered table-hover table-striped" width="700">
               <tr class="table-header" width="500">
                 <th>SR. NO</th>
@@ -312,7 +311,6 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
         </div>
       </div>
     </div>
@@ -343,10 +341,10 @@
                                   View Certificate
                                 </button>
                               </p>
-                              <div style="min-height: 120px;">
+                              <div style="min-height: 10px;">
                                 <div class="collapse collapse-vertical" id="collapseWidthExampleCOC">
-                                  <div class="card card-body" style="width: 300px; align-items: right;">
-                                    <img id="cert" src="./class II COC.png">
+                                  <div class="card card-body" style="width: 80%; height: auto; align-items: right;">
+                                    <img class="img-fluid" id="cert" src="./class II COC.png">
                                   </div>
                                 </div>
                               </div>
@@ -364,10 +362,10 @@
                                   View Certificate
                                 </button>
                               </p>
-                              <div style="min-height: 120px;">
+                              <div style="min-height: 10px;">
                                 <div class="collapse collapse-vertical" id="collapseWidthExampleExcel">
-                                  <div class="card card-body" style="width: 500px; align-items: right;">
-                                    <img id="cert"   src="./excelCert.jpg">
+                                  <div class="card card-body" style="width: 80%; height: auto; align-items: right;">
+                                    <img class="img-fluid" id="cert"   src="./excelCert.jpg">
                                   </div>
                                 </div>
                               </div>
@@ -384,10 +382,10 @@
                                   View Certificate
                                 </button>
                               </p>
-                              <div style="min-height: 120px;">
+                              <div style="min-height: 10px;">
                                 <div class="collapse collapse-vertical" id="collapseWidthExampleData">
-                                  <div class="card card-body" style="width: 500px; align-items: right;">
-                                    <img  id="cert" src="./Datacert.jpg">
+                                  <div class="card card-body" style="width: 80%; height: auto; align-items: right;">
+                                    <img class="img-fluid" id="cert" src="./Datacert.jpg">
                                   </div>
                                 </div>
                               </div>
@@ -408,7 +406,7 @@
   
 
   <!-- Modal -->
-  <div class="modal fade" id="staticBackdropEdu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade modal-xl" id="staticBackdropEdu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -427,9 +425,9 @@
                                   <img src="./certclip.jpg" height="20px" width="50px">
                                 </button>
                               </p>
-                              <div style="min-height: 120px;">
+                              <div style="min-height: 10px;">
                                 <div class="collapse collapse-vertical" id="collapseGME">
-                                  <div class="card card-body" style="width: 400px; align-items: right;">
+                                  <div class="card card-body" style="width: 80%; height: auto; align-items: right;">
                                     <img src="./gme.jpg">
                                   </div>
                                 </div>
@@ -449,9 +447,9 @@
                                   <img src="./certclip.jpg" height="20px" width="50px">
                                 </button>
                               </p>
-                              <div style="min-height: 120px;">
+                              <div style="min-height: 10px;">
                                 <div class="collapse collapse-vertical" id="collapseMech">
-                                  <div class="card card-body" style="width: 400px; align-items: right;">
+                                  <div class="card card-body" style="width: 80%; height: auto; align-items: right;">
                                     <img src="./degree.jpg">
                                   </div>
                                 </div>
