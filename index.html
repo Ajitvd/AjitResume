@@ -24,17 +24,12 @@
             height: 100vh;
         }
         .nav-pills {
-            height: 8rem;
+            height: auto;
             width: 100%;
             align-items: center;
             font-family: "PT Serif", serif;
             font-weight: 800;
-            z-index: 1;
-            position: fixed;
             background-color: #734bae;
-        }
-        #alignCard {
-          margin-top: 12rem;
         }
         .card-title {
             font-family:"Oswald", sans-serif;
@@ -90,6 +85,7 @@
             font-family: "PT Serif", serif;
             font-weight: 800;
         }
+        
     </style>
 </head>
 
@@ -98,30 +94,34 @@
         
 <!-- Navigation panel-->
 <div class="page-header">
+  <nav class="navbar navbar-expand-lg py-0">
+    <div class="container-fluid px-0" style="height: auto; z-index: 1;">
     
-        <ul class="nav nav-pills nav-fill shadow p-3 rounded flex-column flex-sm-row">
+        <ul class="nav nav-pills nav-fill p-4">
             <li class="nav-item">
-              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropAboutMe">About Me</a>
+              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropAboutMe">About Me</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropWrkExp">Work Experience</a>
+              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropWrkExp">Work Experience</a>
             </li>
             <li class="nav-item">
-                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropSeaServ">Sea Service</a>
+                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropSeaServ">Sea Service</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#exampleBackdropCert">Certifications</a>
+              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleBackdropCert">Certifications</a>
             </li>
             <li class="nav-item">
-              <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropEdu">Education</a>
+              <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropEdu">Education</a>
             </li>
             <!--<li class="nav-item">
-                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropPortfolio">Portfolio</a>
+                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropPortfolio">Portfolio</a>
             </li>-->
             <li class="nav-item">
-                <a type="button" class="flex-sm-fill text-sm-center nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">Contact Me!</a>
+                <a type="button" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdropCard">Contact Me!</a>
             </li>
           </ul>
+        </div>
+        </nav>
         
     </div>
     <div class="container">   
